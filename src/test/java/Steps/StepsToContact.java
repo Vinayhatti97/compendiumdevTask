@@ -7,12 +7,14 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.CompandiumdevPages.HomePage;
-import org.CompandiumdevPages.org.ContactsPage;
+import org.CompandiumdevPages.ContactsPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
+import java.io.IOException;
 
 public class StepsToContact  {
 
@@ -37,7 +39,7 @@ public class StepsToContact  {
         homePage.clickOnContact();
     }
     @When("user Enter Name and Email and Message")
-    public void user_enter_name_and_email_and_message() throws InterruptedException {
+    public void user_enter_name_and_email_and_message() throws InterruptedException, IOException {
         ContactsPage contactsPage = new ContactsPage(driver);
         contactsPage.switchToFrameAndenterDetails();
 

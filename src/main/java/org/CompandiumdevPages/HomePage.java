@@ -17,6 +17,9 @@ public class HomePage {
     @FindBy(xpath = "//div[@ id = 'cssmenu']/ul/li[2]/a")
     WebElement contactbutton;
 
+    /*
+    This method will cilck on Contacts button in Homepage
+     */
     public void clickOnContact(){
         seleniumActions.waitandClickElement(contactbutton);
     }
